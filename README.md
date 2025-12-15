@@ -32,7 +32,7 @@ Table of Contents
 
 I. Adding the meta-serena-layer layer to your build
 =================================================
-
+After adding the enclustra layers
 Run 'bitbake-layers add-layer meta-serena-layer'
 
 II. Misc
@@ -65,3 +65,13 @@ sudo ip link set end0 up
 ```
 
 if connecting from windows make sure to allow connection from firewall and configure ip and submask properly
+
+## myaccip usage
+```
+gcc -O2 -Wall -o myaccip_uio myaccip_uio.c
+
+./myaccip_uio /dev/uio0 read version
+./myaccip_uio /dev/uio0 read status
+./myaccip_uio /dev/uio0 write control 0x1
+./myaccip_uio /dev/uio0 dump
+```

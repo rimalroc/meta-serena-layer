@@ -1,7 +1,10 @@
-&amba {
-    myaccip@80010000 {
-        compatible = "serena,myaccip-1.0";
-        reg = <0x0 0x80010000 0x0 0x00001000>; /* size: 4 KiB example */
-        /* interrupts = <...>; */
-    };
+&myaccip_0 {
+    compatible = "generic-uio";
+
+    /*
+     * IRQ placeholder (do not enable yet):
+     * If the generated node already has interrupts, leave them as-is.
+     * If you later want userspace IRQ via UIO, switch to:
+     * compatible = "uio_pdrv_genirq";
+     */
 };
